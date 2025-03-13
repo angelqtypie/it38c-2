@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../db/db_con.php";
+require_once "../db/config.php";
 // Check if the user is logged in
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
@@ -57,12 +57,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </p>
     <div class="container mt-5">
         <!-- Greeting message -->
-        <h3>Hello, <?php echo $username; ?>!</h3>
+        <h3>Just Click Pesent if you are, <?php echo $username; ?>!</h3>
         
         <!-- Form to mark present -->
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="mb-3">
-                <button type="submit" name="present" class="btn btn-primary w-100">Say Present</button>
+                <button type="submit" name="present" class="btn btn-primary w-20">Present</button>
             </div>
         </form>
     </div>
