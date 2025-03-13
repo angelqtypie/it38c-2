@@ -1,8 +1,9 @@
 <?php
 $host = 'localhost'; // or your database host
-$dbname = 'enterprise_system';
+$dbname = 'it38c-2';
 $username = 'root';
 $password = '';
+
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
